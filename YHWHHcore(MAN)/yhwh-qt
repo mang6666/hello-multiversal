@@ -1,0 +1,15 @@
+#! / bin / bash
+si [ " $ EUID "  -ne 0]
+    luego  repita  " Ejecutar como root "
+más
+apt update -y
+apt install autoconf libcurl4-openssl-dev libjansson-dev openssl libssl-dev gcc gawk automake git -y
+git clone https://github.com/lucasjones/cpuminer-multi.git
+cd cpuminer-multi
+./autogen.sh
+./configure
+hacer
+printf  " Para usar el tipo ./minerd con las opciones que desee mientras está en la carpeta cpuminer-multi \ n "
+printf  " Por ejemplo ./minerd -a cryptonight -o estrato + tcp: //xmr-usa.dwarfpool.com: 8050 -u 45MfScNnyb3KwanUH4feiDExdydQ3cACKPpJuxmtoVnY25Khw7nBeZmXhtoWj4Pfi4PjdxkFWpaW72PR3Jy1Xr8R6HFyk9M -PX -t 4 "
+
+fi
